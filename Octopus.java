@@ -1,12 +1,12 @@
 package hw7;
 
-public class Penguin extends AnimalList {
+public class Octopus extends AnimalList {
 	@Override
 	public String aboutMe() {
-		return "Penguin";
+		return "Octopus";
 	}
 	
 	public String diet() {
-		return "Fish";
+		return "Crabs/Fish";
 	}
 }

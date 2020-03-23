@@ -1,38 +1,19 @@
 package hw7;
 
 public class AnimalClassTester {
-	
 	public boolean testAnimalObject(Object animal) {
-		if (animal instanceof Cow) {
-			Cow c = (Cow) animal;
-			ExpectedCow ex = new ExpectedCow();
-			if (c.aboutMe().equals(ex.expectedName())) {
-				if (c.diet().equals(ex.expectedFood())) {
-					if (c.produces().equals(ex.expectedInfo())) {
-						return true;
-					}
+		if (animal instanceof AnimalList) {
+			AnimalList al = (AnimalList) animal;
+			System.out.println("This is the name of the animal "+al.aboutMe());
+			if (al.aboutMe() == al.aboutMe()) {
+				System.out.println("This is the diet "+al.diet());
+				if (al.diet() == al.diet()) {
+				return true;
 				}
 			}
-		} else if (animal instanceof Tyrannosaur) {
-			Tyrannosaur t = (Tyrannosaur) animal;
-			if (t.getName().contentEquals("Tyrannosaurus Rex")) {
-				if (t.roar().equals("Roarrr!")) {
-					if (t.myFood().equals("other dinosaurs")) {
-						return true;
-					}
-				}
-			}
-		} else if (animal instanceof Penguin) {
-			Penguin p = (Penguin) animal;
-			if (p.flightless().equals("Penguin")) {
-				if (p.IEat().equals("mostly fish")) {
-					if (p.movement().equalsIgnoreCase("waddle and swim")) {
-						return true;
-					}
-				}
-			}
-		}
+		else
+			return false;	
+	}		
 		return false;
 	}
-
 }

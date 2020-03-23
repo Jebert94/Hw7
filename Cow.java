@@ -1,16 +1,11 @@
 package hw7;
 
-public class Cow {
+public class Cow extends AnimalList {
+	@Override
 	public String aboutMe() {
 		return "Cow";
 	}
-	
 	public String diet() {
-		return "grass, hay, and corn";
+		return "Grass"; 
 	}
-	
-	public String produces() {
-		return "milk and cheese";
-	}
-
 }
